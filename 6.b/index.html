@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+		<div class="header page-header col-md-12">
+			<img class=" img img-responsive col-md-1" src="images/logo.jpg">
+			<div class="navbar-form">
+				<form class="form-group col-md-9">
+					<input type="text" name="search" class="search-input form-control col-md-8" placeholder="Search ...">
+					<button type="submit" class="form-control col-md-2"><i class="glyphicon glyphicon-search"></i></button>
+				</form>
+			</div>
+			<button class="btn btn-warning col-md-1" data-toggle="modal" data-target="#add-modal">Add</button>
+		</div>
+			<table class="table table-collapse">
+				<tr>
+					<th class="text-center warning col-lg-1">No</th>
+					<th class="text-center warning col-lg-2">Cashier</th>
+					<th class="text-center warning col-lg-2">Product</th>
+					<th class="text-center warning col-lg-2">Category</th>
+					<th class="text-center warning col-lg-2">Price</th>
+					<th class="text-center warning col-lg-1">Action</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Pevita Pearce</td>
+					<td>Latte</td>
+					<td>Drink</td>
+					<td>Rp.10000</td>
+					<td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#edit-modal"><i class="glyphicon glyphicon-edit"></i></button> || <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal"><i class="glyphicon glyphicon-trash"></i></button></td>
+				</tr><tr>
+					<td>2</td>
+					<td>Rasia Andriana</td>
+					<td>Cake</td>
+					<td>Food</td>
+					<td>Rp.20000</td>
+					<td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#edit-modal"><i class="glyphicon glyphicon-edit"></i></button> || <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal"><i class="glyphicon glyphicon-trash"></i></button></td>
+				</tr><tr>
+					<td>3</td>
+					<td>Ardiyana Saputra</td>
+					<td>Nasi Goreng Special</td>
+					<td>Food</td>
+					<td>45000</td>
+					<td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#edit-modal"><i class="glyphicon glyphicon-edit"></i></button> || <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal"><i class="glyphicon glyphicon-trash"></i></button></td>
+				</tr>
+			</table>
+
+	<div class="modal fade" id="edit-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="botton" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only"></span>
+					</button>
+					<h4 class="modal-title">Edit</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-group">
+						<select name="Cashier_id" class="form-control">
+							<option value="1">Pevita Pearce</option>
+							<option value="2">Raisa Andriana</option>
+							<option value="3">Ardiyana Saputra</option>
+						</select>
+						<br>
+						<select name="Category_id" class="form-control">
+							<option value="1">Drink</option>
+							<option value="2">Food</option>
+						</select>
+						<br>
+						<input type="text" name="name" class="form-control">
+						<br>
+						<input type="number" name="price" class="form-control">
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" name="save_edit" class="btn btn-primary">Save changes</button></form>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<div class="modal fade" id="add-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="botton" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only"></span>
+					</button>
+					<h4 class="modal-title">Add</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<select name="Cashier_id" class="form-control">
+							<option value="1">Pevita Pearce</option>
+							<option value="2">Raisa Andriana</option>
+							<option value="3">Ardiyana Saputra</option>
+						</select>
+						<select name="Category_id" class="form-control">
+							<option value="1">Drink</option>
+							<option value="2">Food</option>
+						</select>
+						<input type="text" name="name" class="form-control">
+						<input type="number" name="price" class="form-control">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" name="save_add" class="btn btn-primary">Save changes</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<div class="modal fade" id="delete-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="botton" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only"></span>
+					</button>
+					<h4 class="modal-title">modal title</h4>
+				</div>
+				<div class="modal-body">
+					<p>Apakah anda serius ingin menghapusnya</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger">Delete</button>
+				</div>
+			</div>
+		</div>
+	</div>		
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
